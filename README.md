@@ -46,3 +46,26 @@ Correctness of the sorting implementation in both sequential and concurrent meth
 Efficiency and performance comparison between the sequential and concurrent implementations.
 Code quality, organization, and adherence to Go best practices.
 Proper Dockerization of the application.
+
+
+
+
+
+Running the server:
+
+Build the Docker image:
+docker build -t your-docker-username/server .
+Push the Docker image to Docker Hub:
+docker push your-docker-username/server
+Run the Docker image:
+docker run -p 8000:8000 your-docker-username/server
+Testing the server:
+
+Send a POST request to /process-single with the following JSON payload:
+JSON
+{"to_sort": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
+Use code with caution. Learn more
+Send a POST request to /process-concurrent with the same JSON payload.
+Evaluation:
+
+This code demonstrates the correct implementation of sequential and concurrent sorting with proper performance measurement. The code is well-organized and follows Go best
